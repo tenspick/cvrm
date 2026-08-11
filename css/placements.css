@@ -1,0 +1,269 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Placements Page Styles
+   ============================================================ */
+
+/* Stats Dashboard */
+.placement-stats-dashboard {
+  padding: var(--space-section) 0;
+  background: var(--color-bg);
+}
+
+.placement-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+}
+
+.placement-stat-card {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.placement-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+  transform: scaleX(0);
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.placement-stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.placement-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Recruiters Logo Grid */
+.recruiters-section {
+  background: var(--color-bg-elevated);
+  padding: var(--space-section) 0;
+}
+
+.recruiters-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+.recruiter-logo {
+  aspect-ratio: 3/2;
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  transition: all var(--duration-normal) var(--ease-out-expo);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-gray);
+  text-align: center;
+}
+
+.recruiter-logo:hover {
+  border-color: var(--color-gold);
+  background: var(--color-glass-hover);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+.recruiter-logo img {
+  max-width: 80%;
+  max-height: 60%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(2);
+  opacity: 0.5;
+  transition: all var(--duration-normal) ease;
+}
+
+.recruiter-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Success Stories */
+.success-stories {
+  padding: var(--space-section) 0;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.story-card {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  transition: all var(--duration-normal) var(--ease-out-expo);
+  position: relative;
+}
+
+.story-card::before {
+  content: '"';
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-gold);
+  opacity: 0.2;
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-lg);
+}
+
+.story-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-5px);
+}
+
+.story-card p {
+  font-size: var(--fs-body);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.story-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.story-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(201,168,76,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body-lg);
+}
+
+.story-author-info h5 {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-white);
+}
+
+.story-author-info span {
+  font-size: var(--fs-caption);
+  color: var(--color-gray);
+}
+
+/* Process */
+.placement-process {
+  background: var(--color-bg-elevated);
+  padding: var(--space-section) 0;
+}
+
+.process-timeline {
+  display: flex;
+  gap: var(--space-xl);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.process-node {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  position: relative;
+}
+
+.process-node::after {
+  content: '→';
+  position: absolute;
+  right: -20px;
+  top: 30px;
+  color: var(--color-gold);
+  font-size: 1.5rem;
+}
+
+.process-node:last-child::after {
+  display: none;
+}
+
+.process-node-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: rgba(201,168,76,0.1);
+  border: 2px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+}
+
+.process-node h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .placement-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recruiters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .placement-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recruiters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-node::after {
+    display: none;
+  }
+}

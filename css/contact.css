@@ -1,0 +1,176 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Contact Page Styles
+   ============================================================ */
+
+.contact-main {
+  padding: var(--space-section) 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+/* Contact Info */
+.contact-info h2 {
+  margin-bottom: var(--space-md);
+}
+
+.contact-info > p {
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.c-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.c-info-card:hover {
+  border-color: var(--color-gold);
+  transform: translateX(5px);
+}
+
+.c-info-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,168,76,0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-gold);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.c-info-content h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.25rem;
+  color: var(--color-white);
+}
+
+.c-info-content p,
+.c-info-content a {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+.c-info-content a:hover {
+  color: var(--color-gold);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+}
+
+.contact-form-wrapper h3 {
+  margin-bottom: var(--space-xl);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-submit {
+  margin-top: var(--space-md);
+}
+
+/* Map Section */
+.contact-map-section {
+  padding: var(--space-section) 0;
+  background: var(--color-bg-elevated);
+}
+
+.contact-map-full {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-glass-border);
+  aspect-ratio: 21/9;
+}
+
+.contact-map-full iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Quick Links CTA */
+.contact-cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-3xl) 0;
+}
+
+.contact-cta-card {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.contact-cta-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-5px);
+}
+
+.contact-cta-card .cta-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.contact-cta-card h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .contact-map-full {
+    aspect-ratio: 16/9;
+  }
+
+  .contact-cta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map-full {
+    aspect-ratio: 4/3;
+  }
+}

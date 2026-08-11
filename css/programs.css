@@ -1,0 +1,332 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Programs Page Styles
+   ============================================================ */
+
+.programs-hero-desc {
+  max-width: 600px;
+}
+
+/* Program Detail Cards */
+.program-detail-card {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.program-detail-card:hover {
+  border-color: var(--color-glass-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.program-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xl) var(--space-2xl);
+  cursor: pointer;
+  transition: background var(--duration-normal) ease;
+}
+
+.program-detail-header:hover {
+  background: var(--color-glass-hover);
+}
+
+.program-detail-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.program-detail-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--color-gold);
+  font-weight: var(--fw-bold);
+  min-width: 60px;
+}
+
+.program-detail-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+.program-detail-duration {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+  padding: 0.4rem 1rem;
+  background: var(--color-glass);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-glass-border);
+}
+
+.program-detail-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-glass-border);
+  background: none;
+  color: var(--color-gold);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.program-detail-card.active .program-detail-toggle {
+  transform: rotate(45deg);
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border-color: var(--color-gold);
+}
+
+/* Expandable Body */
+.program-detail-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-slow) var(--ease-out-expo);
+}
+
+.program-detail-card.active .program-detail-body {
+  max-height: 600px;
+}
+
+.program-detail-content {
+  padding: 0 var(--space-2xl) var(--space-2xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.program-info-block h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.program-info-block p,
+.program-info-block ul {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+.program-info-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.program-info-block li {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.program-info-block li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-top: 1.5px solid var(--color-gold);
+  border-right: 1.5px solid var(--color-gold);
+  transform: rotate(45deg);
+}
+
+/* Why Choose Section */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.why-choose-card {
+  padding: var(--space-xl);
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.why-choose-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-5px);
+}
+
+.why-choose-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.why-choose-card h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+/* ============================================================
+   PROGRAMS PAGE RESPONSIVE
+   ============================================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .program-detail-header{
+    padding: var(--space-lg) var(--space-xl);
+  }
+
+  .program-detail-content{
+    grid-template-columns: repeat(2,1fr);
+    gap: var(--space-lg);
+  }
+
+  .why-choose-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+  .program-detail-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:1rem;
+    padding:var(--space-lg);
+  }
+
+  .program-detail-header-left{
+    flex:1;
+    min-width:0;
+    gap:0.8rem;
+  }
+
+  .program-detail-number{
+    min-width:40px;
+    font-size:1.6rem;
+  }
+
+  .program-detail-title{
+    font-size:1.2rem;
+    line-height:1.4;
+    word-break:break-word;
+  }
+
+  .program-detail-duration{
+    margin-top:.5rem;
+    display:inline-flex;
+    width:fit-content;
+    font-size:.8rem;
+    padding:.35rem .8rem;
+  }
+
+  .program-detail-toggle{
+    width:36px;
+    height:36px;
+    flex-shrink:0;
+  }
+
+  .program-detail-content{
+    grid-template-columns:1fr;
+    gap:1.25rem;
+    padding:0 var(--space-lg) var(--space-lg);
+  }
+
+  .program-info-block h4{
+    font-size:.85rem;
+  }
+
+  .program-info-block p,
+  .program-info-block ul{
+    font-size:.9rem;
+    line-height:1.7;
+  }
+
+  .why-choose-grid{
+    grid-template-columns:1fr;
+    gap:var(--space-lg);
+  }
+
+  .why-choose-card{
+    padding:var(--space-lg);
+  }
+
+  .why-choose-icon{
+    font-size:2rem;
+  }
+
+}
+
+
+/* Small Phones */
+@media (max-width:480px){
+
+  .program-detail-card{
+    margin-bottom:1rem;
+  }
+
+  .program-detail-header{
+    padding:1rem;
+  }
+
+  .program-detail-header-left{
+    gap:.75rem;
+  }
+
+  .program-detail-number{
+    min-width:32px;
+    font-size:1.3rem;
+  }
+
+  .program-detail-title{
+    font-size:1rem;
+  }
+
+  .program-detail-duration{
+    font-size:.72rem;
+    padding:.3rem .7rem;
+  }
+
+  .program-detail-toggle{
+    width:32px;
+    height:32px;
+    font-size:1rem;
+  }
+
+  .program-detail-content{
+    padding:0 1rem 1rem;
+    gap:1rem;
+  }
+
+  .program-info-block h4{
+    font-size:.8rem;
+  }
+
+  .program-info-block p,
+  .program-info-block ul{
+    font-size:.85rem;
+  }
+
+  .why-choose-card{
+    padding:1.25rem;
+  }
+
+  .why-choose-icon{
+    font-size:1.8rem;
+  }
+
+}

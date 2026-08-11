@@ -1,0 +1,278 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Admissions Page Styles
+   ============================================================ */
+
+/* Process Steps */
+.admission-process {
+  padding: var(--space-section) 0;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--color-glass-border);
+  z-index: 0;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  border: 2px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--color-gold);
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.process-step:hover .step-number {
+  background: var(--color-gold);
+  color: var(--color-bg);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-gold);
+}
+
+.process-step h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+.process-step p {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+  margin: 0 auto;
+  max-width: 250px;
+}
+
+/* Eligibility Table */
+.eligibility-section {
+  background: var(--color-bg-elevated);
+  padding: var(--space-section) 0;
+}
+
+.eligibility-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-glass-border);
+}
+
+.eligibility-table thead {
+  background: rgba(201,168,76,0.1);
+}
+
+.eligibility-table th {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+}
+
+.eligibility-table td {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+  border-top: 1px solid var(--color-glass-border);
+}
+
+.eligibility-table tr:hover td {
+  background: var(--color-glass-hover);
+  color: var(--color-white);
+}
+
+/* Important Dates */
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.date-card {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.date-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-3px);
+}
+
+.date-card .date-month {
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.date-card .date-day {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.date-card .date-event {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+/* FAQ Accordion */
+.faq-section {
+  padding: var(--space-section) 0;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-glass-border);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-lg) 0;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  text-align: left;
+  transition: color var(--duration-fast) ease;
+}
+
+.faq-question:hover {
+  color: var(--color-gold);
+}
+
+.faq-question .faq-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-glass-border);
+  font-size: 1rem;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border-color: var(--color-gold);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-slow) var(--ease-out-expo);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-answer p {
+  padding-bottom: var(--space-lg);
+  font-size: var(--fs-small);
+  line-height: 1.8;
+}
+
+/* CTA Banner */
+.admission-cta {
+  background: var(--color-bg-elevated);
+  text-align: center;
+  padding: var(--space-section) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.admission-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .process-steps::before {
+    display: none;
+  }
+
+  .dates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .dates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eligibility-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

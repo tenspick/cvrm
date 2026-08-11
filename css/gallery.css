@@ -1,0 +1,226 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Gallery Page Styles
+   ============================================================ */
+
+/* Filter Buttons */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2xl);
+}
+
+.filter-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-glass-border);
+  background: transparent;
+  color: var(--color-gray);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(201,168,76,0.08);
+}
+
+.filter-btn.active {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+/* Masonry Grid */
+.gallery-masonry {
+  columns: 3;
+  column-gap: var(--space-md);
+  padding: 0;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--duration-slowest) var(--ease-out-expo);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10,10,18,0.8) 100%);
+  opacity: 0;
+  transition: opacity var(--duration-normal) ease;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-md);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-caption {
+  color: #ffffff;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+}
+
+/* Video Gallery */
+.gallery-videos {
+  padding: var(--space-3xl) 0;
+}
+
+.gallery-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.gallery-video-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-glass-border);
+}
+
+.gallery-video-card .video-placeholder {
+  border: none;
+  border-radius: 0;
+}
+
+.gallery-video-info {
+  padding: var(--space-md);
+}
+
+.gallery-video-info h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--duration-normal) ease;
+  cursor: pointer;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-normal) ease;
+}
+
+.lightbox-close:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-normal) ease;
+}
+
+.lightbox-nav:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.lightbox-prev { left: var(--space-lg); }
+.lightbox-next { right: var(--space-lg); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gallery-masonry {
+    columns: 2;
+  }
+
+  .gallery-videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-masonry {
+    columns: 1;
+  }
+
+  .gallery-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-caption);
+  }
+}

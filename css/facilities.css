@@ -1,0 +1,139 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Facilities Page Styles
+   ============================================================ */
+
+.facilities-showcase {
+  padding: var(--space-section) 0;
+}
+
+.facility-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  padding: var(--space-3xl) 0;
+  border-bottom: 1px solid var(--color-glass-border);
+}
+
+.facility-detail:nth-child(even) {
+  direction: rtl;
+}
+
+.facility-detail:nth-child(even) > * {
+  direction: ltr;
+}
+
+.facility-detail:last-child {
+  border-bottom: none;
+}
+
+.facility-detail-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  position: relative;
+  background: var(--color-bg-elevated);
+}
+
+.facility-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slowest) var(--ease-out-expo);
+}
+
+.facility-detail:hover .facility-detail-image img {
+  transform: scale(1.05);
+}
+
+.facility-detail-content .label-text {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.facility-detail-content h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-md);
+}
+
+.facility-detail-content p {
+  margin-bottom: var(--space-lg);
+}
+
+.facility-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.facility-features-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+.facility-features-list li::before {
+  content: '✓';
+  color: var(--color-gold);
+  font-weight: var(--fw-bold);
+  font-size: 0.8em;
+  flex-shrink: 0;
+}
+
+/* Quick Stats Banner */
+.facilities-stats-banner {
+  background: var(--color-bg-elevated);
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--color-glass-border);
+  border-bottom: 1px solid var(--color-glass-border);
+}
+
+.facilities-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  text-align: center;
+}
+
+.facility-stat-item .stat-number {
+  font-size: var(--fs-h2);
+}
+
+/* Video Placeholder Grid */
+.facility-videos {
+  padding: var(--space-section) 0;
+}
+
+.facility-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .facility-detail {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .facility-detail:nth-child(even) {
+    direction: ltr;
+  }
+
+  .facilities-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facility-videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .facilities-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,119 @@
+/* ============================================================
+   CVRM DEGREE COLLEGE — Departments Page Styles
+   ============================================================ */
+
+.dept-detail-section {
+  padding: var(--space-section) 0;
+  position: relative;
+}
+
+.dept-detail-section:nth-child(even) {
+  background: var(--color-bg-elevated);
+}
+
+.dept-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.dept-detail-section:nth-child(even) .dept-detail-grid {
+  direction: rtl;
+}
+
+.dept-detail-section:nth-child(even) .dept-detail-grid > * {
+  direction: ltr;
+}
+
+.dept-detail-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.dept-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dept-detail-content .label-text {
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.dept-detail-content h2 {
+  margin-bottom: var(--space-md);
+}
+
+.dept-detail-content > p {
+  margin-bottom: var(--space-lg);
+}
+
+.dept-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.dept-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+.dept-feature::before {
+  content: '◆';
+  color: var(--color-gold);
+  font-size: 0.5em;
+}
+
+/* Department Stats */
+.dept-stats-bar {
+  display: flex;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-glass-border);
+}
+
+.dept-stat {
+  text-align: center;
+}
+
+.dept-stat-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.dept-stat-label {
+  font-size: var(--fs-caption);
+  color: var(--color-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dept-detail-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .dept-detail-section:nth-child(even) .dept-detail-grid {
+    direction: ltr;
+  }
+
+  .dept-features {
+    grid-template-columns: 1fr;
+  }
+}
