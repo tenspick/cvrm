@@ -277,6 +277,11 @@
     letter-spacing: 0.08em;
   }
 
+     .vm-card {
+  padding: 30px;
+  }
+
+
 }
 
 /* Small Mobile */
@@ -299,6 +304,11 @@
     line-height: 1.4;
     letter-spacing: 0.06em;
   }
+
+     .vm-card {
+  padding: 30px;
+  }
+
 
 }
 /* College Overview Split */
