@@ -1,90 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://www.cvrmcollege.com/</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/about/about.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/programs.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/bca-ai/bca-ai.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/bca-ds/bca-ds.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/bcom/bcom.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/bba/bba.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/bsc-mpc/bsc-mpc.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/bsc-bzc/bsc-bzc.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/programs/ba/ba.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/admissions/admissions.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/placements/placements.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/facilities/facilities.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/departments/departments.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/leadership/leadership.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/gallery/gallery.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.cvrmcollege.com/contact/contact.html</loc>
-        <lastmod>2026-08-12</lastmod>
-    </url>
-
+  <url>
+    <loc>https://www.cvrmcollege.com/</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/about/about.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/programs.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/bca-ai/bca-ai.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/bca-ds/bca-ds.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/bcom/bcom.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/bba/bba.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/bsc-mpc/bsc-mpc.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/bsc-bzc/bsc-bzc.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/programs/ba/ba.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/admissions/admissions.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/placements/placements.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/facilities/facilities.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/departments/departments.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/leadership/leadership.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/gallery/gallery.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cvrmcollege.com/contact/contact.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
 </urlset>

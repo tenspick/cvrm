@@ -1,16 +1,20 @@
+# Exclude static SEO files from routing
+/robots.txt       /robots.txt            200
+/sitemap.xml      /sitemap.xml           200
+
 # Clean URL routing for static site
-/about/          /about/index.html     200
-/programs/       /programs/index.html  200
-/departments/    /departments/index.html  200
-/facilities/     /facilities/index.html  200
-/admissions/     /admissions/index.html  200
-/placements/     /placements/index.html  200
-/leadership/     /leadership/index.html  200
-/gallery/        /gallery/index.html  200
-/contact/        /contact/index.html  200
-/programs/bcom   /programs/bcom/bcom.html    200
-/programs/bba    /programs/bba/bba.html     200
-/programs/ba     /programs/ba/ba.html      200
-/programs/bsc-mpc  /programs/bsc-mpc/bsc-mpc.html  200
-/programs/bsc-bzc  /programs/bsc-bzc/bsc-bzc.html  200
-/programs/bsc-msc  /programs/bsc-msc/bsc-msc.html  200
+/about/           /about/about.html        200
+/programs/        /programs/programs.html  200
+/departments/     /departments/departments.html 200
+/facilities/      /facilities/facilities.html 200
+/admissions/      /admissions/admissions.html 200
+/placements/      /placements/placements.html 200
+/leadership/      /leadership/leadership.html 200
+/gallery/         /gallery/gallery.html     200
+/contact/         /contact/contact.html     200
+/programs/bcom    /programs/bcom/bcom.html  200
+/programs/bba     /programs/bba/bba.html   200
+/programs/ba      /programs/ba/ba.html     200
+/programs/bsc-mpc /programs/bsc-mpc/bsc-mpc.html 200
+/programs/bsc-bzc /programs/bsc-bzc/bsc-bzc.html 200
+/programs/bsc-msc /programs/bsc-msc/bsc-msc.html 200

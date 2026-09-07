@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -20,5 +19,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Sitemap
 Sitemap: https://www.cvrmcollege.com/sitemap.xml

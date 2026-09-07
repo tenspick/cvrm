@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Explicitly exclude SEO files from rewrite rules
+RewriteRule ^robots\.txt$ - [L]
+RewriteRule ^sitemap\.xml$ - [L]
+
 # Remove .html extension
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R=301]
